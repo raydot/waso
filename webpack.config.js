@@ -15,6 +15,11 @@ module.exports = {
 	module: {
 		rules: [
 			{
+				test: /\.json$/,
+				/*loader: 'json-loader',*/
+				use: 'json-loader'
+			},
+			{
 				loader: 'babel-loader',
 				test: /\.js$/,
 				exclude: path.resolve(__dirname, "node_modules")
@@ -25,10 +30,6 @@ module.exports = {
 					fallback: 'style-loader',
 					use: ['css-loader', 'sass-loader']
 				})
-			},
-			{
-				test: /\.json$/,
-				loader: 'json-loader'
 			}
 		]
 	},

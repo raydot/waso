@@ -2,58 +2,47 @@
 // let url = "https://www.westelm.com/services/catalog/v4/category/shop/new/all-new/index.json";
 // get_json_data(url);
 
-// let url = "https://www.westelm.com/services/catalog/v4/category/shop/new/all-new/index.json";
-// get_json_data(url);
+export function parseJSON(data) {
+	//data = JSON.stringify(data);
 
+	// brute forcing this for the test, would have to build a more 
+	// fluid engine to consume this content regularly.
+
+	let master=[];
+
+	// pull name, price, image out of JSON and push to master variable
+	// TODO: create carousel
+	$.each( data.groups, function( key, val ) {
+		let thisItem = [];
+		thisItem.push("name:" + val.name);
+		thisItem.push("price:" + (val.priceRange === undefined ? val.price["selling"] : val.priceRange["selling"].high));
+		thisItem.push("image:" + val.hero["href"]);
+		master.push(thisItem);
+	});
+
+	return (master);
+}
 
 //exported functions
 export function get_json_data(path)  {
-	//url += "&callback=?";
-	console.log('path: ' + path);
-		
-	const json = require('json-loader!' + path);
-	console.log(json);
+	
+	//const data = require(path);
 
+	console.log(jsonPath);
 
+	// items = [];
+	// $.each( data, function( key, val ) {
+	// 			items.push( "<li id='" + key + "'>" + val + "</li>" );
+	// 		});
 
-	// $.getJSON(path, {
-	// 	//format: "json"
-	// })
-	// .done(function (data) {
-	// 	console.log("data: " + data);
-	// 	let items = [];
-	// 	$.each( data, function( key, val ) {
-	// 		items.push( "{" + key + ":" + value + "}" );
-	// 	});
+	// 		$( "<ul/>", {
+	// 			"class": "my-new-list",
+	// 			html: items.join( "" )
+	// 	}).appendTo( "my-new-list" );
 
-	// 	console.log(items);
-
-	// // 	// $( "<ul/>", {
-	// // 	// 	"class": "my-new-list",
-	// // 	// 	html: items.join( "" )
-	// // 	// }).appendTo( "myDiv" );
-	// });
-	// $.get(path).done(function (data) {
- //    	console.log(data);
-	// });
 } //get_json_data
 
-// export function help_out_a_brother(url) {
-// 	console.log("Help him out!");
-// 	url += "&callback=?";
-//     $.ajax({
-//       url: url,
-//       type: 'GET',
-//       dataType: 'json',
-//       crossDomain: false,
-//       success: function (data, textStatus, xhr) {
-//         console.log(data);
-//       },
-//       error: function (xhr, textStatus, errorThrown) {
-//         console.log(errorThrown);
-//       }
-//     });
-// }
+
 
 /*  THIS WORKS!  //
 (function() {
