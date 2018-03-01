@@ -1,9 +1,44 @@
 
+@import url('https://fonts.googleapis.com/css?family=Muli');
 
+/* COLORS */
 $bg-color: DarkSlateGray;
-$text-color: DeepPink;
+$text-color: Yellow;
+
+/* FONTS */
+$font-stack: 'Muli', helvetica, sans-serif;
+
+/* SIZES */
+
 
 body {
- background: $bg-color;
+ background-color: $bg-color;
  color: $text-color;
+ font-family: $font-stack;
+}
+
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.cell {
+	flex: 0 0 32%;
+	height: 100px;
+	margin-bottom: .5em;
+	background-color: blue;
+}
+
+.cell:nth-child(3n) {
+	background-color: #0F0;
+}
+
+/*  MEDIA QUERIES  */
+/* "MOBILE */
+$breakpoint-mobile: 450px;
+@media (max-width: $breakpoint-mobile) { 
+	body { 
+		background-color: #F00;
+	}
 }
