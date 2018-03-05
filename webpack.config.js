@@ -34,11 +34,12 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new ExtractTextPlugin('style.css')
+		new ExtractTextPlugin('/css/style.css')
 	],
 	externals: {
 		jquery: 'jQuery'
 	},
+	devtool: 'cheap-module-source-map',
 	devServer: {
 		port: 3001,
 		contentBase: path.resolve(__dirname, "build"),

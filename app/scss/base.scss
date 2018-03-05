@@ -1,11 +1,12 @@
 
-@import url('https://fonts.googleapis.com/css?family=Muli');
+
 
 /* COLORS */
 $bg-color: DarkSlateGray;
 $text-color: Yellow;
 
 /* FONTS */
+@import url('https://fonts.googleapis.com/css?family=Muli');
 $font-stack: 'Muli', helvetica, sans-serif;
 
 /* SIZES */
@@ -40,5 +41,9 @@ $breakpoint-mobile: 450px;
 @media (max-width: $breakpoint-mobile) { 
 	body { 
 		background-color: #F00;
+	}
+
+	.cell {
+		flex: 100%;
 	}
 }

@@ -1,6 +1,5 @@
 //console.log("starting jason_manip");
 // let url = "https://www.westelm.com/services/catalog/v4/category/shop/new/all-new/index.json";
-// get_json_data(url);
 
 export function parseJSON(data) {
 	//data = JSON.stringify(data);
@@ -9,6 +8,9 @@ export function parseJSON(data) {
 	// fluid engine to consume this content regularly.
 
 	let master=[];
+
+	//create the main items array:
+	master.push("items:");
 
 	// pull name, price, image out of JSON and push to master variable
 	// TODO: create carousel
@@ -22,25 +24,6 @@ export function parseJSON(data) {
 
 	return (master);
 }
-
-//exported functions
-export function get_json_data(path)  {
-	
-	//const data = require(path);
-
-	console.log(jsonPath);
-
-	// items = [];
-	// $.each( data, function( key, val ) {
-	// 			items.push( "<li id='" + key + "'>" + val + "</li>" );
-	// 		});
-
-	// 		$( "<ul/>", {
-	// 			"class": "my-new-list",
-	// 			html: items.join( "" )
-	// 	}).appendTo( "my-new-list" );
-
-} //get_json_data
 
 
 
