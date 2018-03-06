@@ -1,6 +1,4 @@
 
-
-
 /* COLORS */
 $bg-color: DarkSlateGray;
 $text-color: Yellow;
@@ -12,11 +10,13 @@ $font-stack: 'Muli', helvetica, sans-serif;
 /* SIZES */
 
 
-body {
+* {
  background-color: $bg-color;
  color: $text-color;
  font-family: $font-stack;
 }
+
+
 
 .grid {
 	display: flex;
@@ -27,7 +27,7 @@ body {
 .cell {
 	flex: 0 0 32%;
 	height: 100px;
-	margin-bottom: .5em;
+	margin: .5em;
 	background-color: blue;
 }
 
