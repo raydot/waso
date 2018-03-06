@@ -6,7 +6,7 @@ import * as json_manip from '../js/json_manip.js';
 //IMPORT THE JSON
 //const jsonData = require('../json/data.json');
 const dataVar = json_manip.parseJSON(require('../json/data.json'));
-console.log(dataVar);
+//console.log(dataVar);
 
 class Global extends Component {
 	constructor(props) {

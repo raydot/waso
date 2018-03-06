@@ -1,7 +1,14 @@
 
 /* COLORS */
 $bg-color: DarkSlateGray;
-$text-color: Yellow;
+$text-color: #000;
+$name-bg-color: rgba(255, 255, 255, .5);
+$blue1: #a5f1ff;
+$blue2: #29727f;
+$blue3: #53e4ff;
+$blue4: #42b6cc;
+$grey1: #737d75;
+
 
 /* FONTS */
 @import url('https://fonts.googleapis.com/css?family=Muli');
@@ -10,12 +17,16 @@ $font-stack: 'Muli', helvetica, sans-serif;
 /* SIZES */
 
 
-* {
- background-color: $bg-color;
- color: $text-color;
+body {
+ background-color: $grey1;
+ color: $blue1;
  font-family: $font-stack;
 }
 
+img {
+	max-width: 100%;
+	max-height:100%;
+}
 
 
 .grid {
@@ -26,9 +37,32 @@ $font-stack: 'Muli', helvetica, sans-serif;
 
 .cell {
 	flex: 0 0 32%;
-	height: 100px;
-	margin: .5em;
-	background-color: blue;
+	height: 300px;
+	margin: .3em;
+	background-color: $blue2;
+	overflow: hidden;
+	position:relative;
+}
+
+.namePlate {	
+	background-color: $name-bg-color;
+	color: $text-color;
+	padding: 2% 5%;
+	font-size: 1.25em;
+}
+
+.imageNPrice {
+	position: relative;
+	float:left;
+}
+
+.priceSpan {
+	position:absolute; 
+	bottom: 5%;
+	left:5%;
+	/*z-index: 10;*/
+	color: $text-color;
+	font-size:2em;
 }
 
 .cell:nth-child(3n) {
@@ -39,9 +73,9 @@ $font-stack: 'Muli', helvetica, sans-serif;
 /* "MOBILE */
 $breakpoint-mobile: 450px;
 @media (max-width: $breakpoint-mobile) { 
-	body { 
+	/*body { 
 		background-color: #F00;
-	}
+	}*/
 
 	.cell {
 		flex: 100%;

@@ -13,10 +13,11 @@ class Gallery extends Component {
 						//let { name } = item.name;
 						let { price } = item.price;
 						return (
-							<div className="cell" key={index}>
-							{ item.name }<br />
-							{ item.price }<br />
-							<img src={ item.image } width="300" alt=" {item.name} " />
+							<div className="cell" key={index} style={{backgroundImage: "url(" + item.image + ")"}}>
+								<div className="namePlate">
+									{ item.name }
+								</div>
+								<span className="priceSpan">${ item.price }</span>
 							</div>
 						)
 					})

@@ -15,17 +15,28 @@ export function parseJSON(data) {
 		let na = val.name;
 		let pr = val.priceRange === undefined ? val.price["selling"] : val.priceRange["selling"].high;
 		let im = val.hero["href"];
-		
+		let ci = val.images;
+
+		let ciData = [];
+		$.each(ci, function (key, val) {
+			ciData.push(val.href);
+		});
+
+		//console.log("CID: " + ciData);
+
 		let jObj = {
 			"name": na,
 			"price": pr,
-			"image": im
+			"image": im,
+			"carouselIm": ciData
 		};
 
 		master.push(jObj);
 	});
 
 	JSON.stringify(master);
+
+	//console.log(master)
 
 	return (master);
 }
