@@ -1,6 +1,6 @@
 # Waso: A Node/React/Webpack Catalog
 
-A Note/React build that renders a JSON file into a simple catalog.  Limited support for tablet/mobile displays.
+A Node/React build that renders a JSON file into a simple catalog.  Limited support for tablet/mobile displays.
 
 ## TODO:
 - Make scalable for any kind of JSON
