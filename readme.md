@@ -1,4 +1,4 @@
-# Waso: A Node/React/Webpack Catalog
+# waso: A Node/React/Webpack Catalog
 
 A Node/React build that renders a JSON file into a simple catalog.  Limited support for tablet/mobile displays.
 
@@ -13,7 +13,7 @@ A Node/React build that renders a JSON file into a simple catalog.  Limited supp
 - Fix bug found in json-loader
 
 ## Installation:
-1. `git clone https://github.com/raydot/Waso.git`
+1. `git clone https://github.com/raydot/waso.git`
 2. `npm install`
 3. `npm run start`
 4. point browser to `http://localhost:3001/` (modify webpack.config.js to change)
