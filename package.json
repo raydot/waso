@@ -1,6 +1,6 @@
 {
-  "name": "dk_files",
-  "version": "1.0.0",
+  "name": "waso",
+  "version": "2.0.0",
   "description": "Williams Sonoma Catalog Application",
   "main": "index.js",
   "scripts": {
@@ -16,14 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/raydot/Waso"
+    "url": "https://github.com/raydot/waso"
   },
   "author": "Dave Kanter",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/raydot/Waso/issues"
+    "url": "https://github.com/raydot/waso/issues"
   },
-  "homepage": "https://github.com/raydot/Waso",
+  "homepage": "https://github.com/raydot/waso",
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-core": "^6.26.3",
@@ -35,7 +35,6 @@
     "css-loader": "^3.0.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "jquery": "^3.4.1",
-    "json-loader": "^0.5.7",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-bootstrap": "^0.32.4",

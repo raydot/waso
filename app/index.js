@@ -2,7 +2,7 @@
 const path = require('path');
 
 //requires
-import $ from 'jquery';
+//import $ from 'jquery';
 import './scss/base.scss';
 
 import React from 'react';

@@ -14,11 +14,11 @@ module.exports = {
 	},
 	module: {
 		rules: [
-			{
+			/*{
 				test: /\.json$/,
 				/*loader: 'json-loader',*/
-				use: 'json-loader'
-			},
+				//use: 'json-loader'
+			//},
 			{
 				loader: 'babel-loader',
 				test: /\.js$/,
@@ -37,9 +37,9 @@ module.exports = {
 	plugins: [
 		new ExtractTextPlugin('/css/style.css')
 	],
-	externals: {
-		jquery: 'jQuery'
-	},
+	// externals: {
+	// 	jquery: 'jQuery'
+	// },
 	devtool: 'cheap-module-source-map',
 	devServer: {
 		port: 3001,
